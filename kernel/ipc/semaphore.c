@@ -1,0 +1,1 @@
+struct fw_sem{unsigned count,max;}; void fw_sem_init(struct fw_sem*s,unsigned n){s->count=n;s->max=n;} int fw_sem_take(struct fw_sem*s){if(!s||!s->count)return -1;s->count--;return 0;} int fw_sem_give(struct fw_sem*s){if(!s||s->count>=s->max)return -1;s->count++;return 0;}

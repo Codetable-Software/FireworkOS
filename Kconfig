@@ -1,0 +1,4 @@
+mainmenu "FireworkOS"
+config FIREWORK_HOST_SIM
+ bool "Host simulator"
+ default y
